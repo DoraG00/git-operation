@@ -209,8 +209,9 @@ commit
 The above commands are to check the file type of an object, as you can see `blob`, `tree`, `commit`
 
 A `blob` object stores the contents of the file with a SHA1 name
+
 | Type | Length | null | Content |
-| ---- | ------ | ---- | ------- |
+| :---: | :----: | :---: | :-----: |
 | blob |  1064  |  \0  | MIT License... |
 
 ```
@@ -227,8 +228,9 @@ fdbd3b6f42b759c2ae095be60be8426292e0ed59
 The above commands shows the object size and object contends identified by <object>, and how the hash came from. 
 
 A `tree` stores information about filenames and permissions for associated blobs
+
 | Permissions | Type |            SHA1        | Filename |
-| ----------- | ---- | ---------------------- | -------- |
+| :---------: | :----: | :----------------------: | :--------: |
 | 100644 | blob | fdbd3b6f42b759c2ae095be60be8426292e0ed59 | LICENSE |
 | 100644 | blob | 8449812f5a4c48192c5ab5ccfbdde488d13a6ee4 | README.md |
 | 100644 | blob | 3c2f359f4bcfb89166f6b28c76ad52510adc01f8 | index.html |
@@ -241,9 +243,11 @@ $ git cat-file -p 0a84
 ```
 
 A `commit` points to a top-level tree of changes for this commit and contains metadata about the commit.
+
 |       Tree       |        Parent       |     Author    |     Committer     |     Commit Message    |
-| ---------------- | ------------------- | ------------- | ----------------- | --------------------- |
+| :--------------: | :-----------------: | :-----------: | :---------------: | :-------------------: |
 | 632eec11....c263 | dd62333f0b6....2d26 | DoraG00 <user@mail.com> |  DoraG00 <user@mail.com> | "feature: a mini webpage" |
+
 ```
 $ git cat-file -p 1226
 tree 632eec11aad2639f162aff15a454c60e22b8c263
@@ -274,8 +278,9 @@ Commits always points to a parent and this forms a linked list where each commit
 `$ git log --oneline --decorate --graph --all`
 
 Question: Rebase VS Merge
+
 |          Rebase         |          Merge        |
-| ----------------------- | --------------------- |
+| :---------------------- | :-------------------- |
 | Pros:                   | Pros:                 |
 | - History remains flat and readable  - Superfluous (Commits are likely non-esistent) | - Traceability (The merge commits will show historyical information including full history of the feature branch) |
 | Cons:                   | Cons:                 |
