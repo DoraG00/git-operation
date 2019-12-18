@@ -272,7 +272,9 @@ ref: refs/heads/develop
 ```
 
 Question: how these commits are connected? 
+
 `HEAD` -> `refs/heads/<branchName>`  ->  `commit`  ->  `tree`  ->  `blob`
+
 Commits always points to a parent and this forms a linked list where each commit knows who its parent is. It makes branching cheap and easy as each branch just needs to point to a single commit. To see how the commits are connected use the following command in your terminal
 
 `$ git log --oneline --decorate --graph --all`
@@ -287,3 +289,17 @@ Question: Rebase VS Merge
 | - Can be dangers. Rebase changes commit SHAs, effectively making new commits and diverging a branch from itself. | - The history becomes very polluted (--first-parent flag can be helpful with this) |
 | - If a branch has already been synced with a remote then it needs to be push with `-force` flag | - If a feature branch has irrelevant commits, they're now part of history |
 
+We've already used merge a lot, from now on we'll use rebase a lot and collaborate with others.
+
+```
+$ git checkout -b feature/rebase
+$ touch .gitignore
+$ vim .gitignore
+$ npm init -y
+$ npm install node-sass express --save
+$ npm install nodemon --save-dev
+** lots of file operation here ** 
+$ git add .
+$ git commit -m "start to interact with nodejs & scss"
+$ git push --set-upstream origin feature/wordle
+```

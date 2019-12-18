@@ -1,0 +1,29 @@
+{
+  "name": "git-operation",
+  "version": "1.0.0",
+  "description": "This is repository is another demonstration of how to use git.",
+  "main": "script.js",
+  "scripts": {
+    "start": "nodemon app",
+    "sass": "node-sass src/scss -wo src/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoraG00/git-operation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DoraG00/git-operation/issues"
+  },
+  "homepage": "https://github.com/DoraG00/git-operation#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-sass": "^4.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
